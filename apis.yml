@@ -1,0 +1,188 @@
+aid: tripo-ai
+url: https://raw.githubusercontent.com/api-evangelist/tripo-ai/refs/heads/main/apis.yml
+name: Tripo AI
+type: Index
+kind: company
+description: >-
+  Tripo AI (VAST AI Research) is an AI 3D content platform that converts text,
+  images, and multi-view photographs into production-ready 3D assets. The
+  platform exposes a REST API at api.tripo3d.ai that orchestrates a unified
+  "task" abstraction across text-to-3D, image-to-3D, multi-view-to-3D, AI
+  texturing, mesh segmentation, model refinement, stylization, format
+  conversion, automatic rigging, retargeting, and one-shot animation. An
+  official Python SDK, an MCP server, and engine plugins for Blender, Unity,
+  Unreal Engine, ComfyUI, Cocos, and Godot wrap the API for creative and game
+  pipelines. Open-source research artifacts (TripoSR, TripoSG, UniRig) ship
+  separately on GitHub under the VAST-AI-Research organization.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+access: 3rd-Party
+created: '2026-05-23'
+modified: '2026-05-23'
+position: Direct
+tags:
+  - 3D
+  - Generative AI
+  - 3D Modeling
+  - Text to 3D
+  - Image to 3D
+  - Rigging
+  - Animation
+  - Texturing
+  - Game Development
+  - Creative Tools
+specificationVersion: '0.19'
+apis:
+  - aid: tripo-ai:openapi-task
+    name: Tripo OpenAPI Task API
+    description: >-
+      Unified task API for all Tripo generative 3D operations. A single POST
+      creates an asynchronous task keyed by task_type (text_to_model,
+      image_to_model, multiview_to_model, texture_model, refine_model,
+      stylize_model, convert_model, mesh_segmentation, animate_prerigcheck,
+      animate_rig, animate_retarget). Tasks are polled via task_id; results
+      include downloadable model URLs, previews, and metadata.
+    humanURL: https://platform.tripo3d.ai/docs
+    baseURL: https://api.tripo3d.ai/v2/openapi
+    tags:
+      - Tasks
+      - Generative 3D
+      - Async
+    properties:
+      - type: Documentation
+        url: https://platform.tripo3d.ai/docs
+  - aid: tripo-ai:openapi-upload
+    name: Tripo OpenAPI Upload API
+    description: >-
+      Upload endpoint for source assets (reference images, multi-view image
+      sets, base meshes) consumed by downstream tasks. Returns a handle that is
+      passed into subsequent task creation calls.
+    humanURL: https://platform.tripo3d.ai/docs
+    baseURL: https://api.tripo3d.ai/v2/openapi
+    tags:
+      - Upload
+      - Assets
+    properties:
+      - type: Documentation
+        url: https://platform.tripo3d.ai/docs
+  - aid: tripo-ai:openapi-balance
+    name: Tripo OpenAPI User Balance API
+    description: >-
+      Returns the calling API key's remaining credit balance and any frozen
+      credits held against in-flight tasks. Used by client integrations to
+      surface usage and gate expensive operations.
+    humanURL: https://platform.tripo3d.ai/docs
+    baseURL: https://api.tripo3d.ai/v2/openapi
+    tags:
+      - Account
+      - Billing
+      - Credits
+    properties:
+      - type: Documentation
+        url: https://platform.tripo3d.ai/docs
+  - aid: tripo-ai:webhook
+    name: Tripo Webhook
+    description: >-
+      Server-to-server webhook delivery of task lifecycle events. Customers
+      register a callback URL and receive notifications when a Tripo task
+      transitions to a terminal state, removing the need to poll task status.
+    humanURL: https://platform.tripo3d.ai/docs
+    baseURL: customer-configured
+    tags:
+      - Webhooks
+      - Events
+      - Callbacks
+    properties:
+      - type: Documentation
+        url: https://platform.tripo3d.ai/docs
+  - aid: tripo-ai:python-sdk
+    name: Tripo Python SDK
+    description: >-
+      Official Python SDK wrapping the Tripo OpenAPI. Provides synchronous and
+      asynchronous clients, typed task helpers, balance retrieval, and
+      file-upload utilities. Auth via TRIPO_API_KEY environment variable or
+      explicit constructor argument.
+    humanURL: https://github.com/VAST-AI-Research/tripo-python-sdk
+    baseURL: https://github.com/VAST-AI-Research/tripo-python-sdk
+    tags:
+      - SDK
+      - Python
+    properties:
+      - type: Repository
+        url: https://github.com/VAST-AI-Research/tripo-python-sdk
+  - aid: tripo-ai:mcp-server
+    name: Tripo MCP Server
+    description: >-
+      Official Model Context Protocol server that exposes Tripo generation
+      tasks as MCP tools, allowing MCP-aware AI clients (Claude Desktop, IDEs,
+      agents) to invoke text-to-3D, image-to-3D, and related workflows.
+    humanURL: https://github.com/VAST-AI-Research/tripo-mcp
+    baseURL: https://github.com/VAST-AI-Research/tripo-mcp
+    tags:
+      - MCP
+      - Agents
+      - AI
+    properties:
+      - type: Repository
+        url: https://github.com/VAST-AI-Research/tripo-mcp
+  - aid: tripo-ai:blender-plugin
+    name: Tripo Blender Plugin
+    description: >-
+      Official Blender extension that wraps the Tripo API so Blender users can
+      generate, texture, refine, and import 3D models directly into a Blender
+      scene from inside the editor.
+    humanURL: https://github.com/VAST-AI-Research/tripo-3d-for-blender
+    baseURL: https://github.com/VAST-AI-Research/tripo-3d-for-blender
+    tags:
+      - Plugin
+      - Blender
+      - DCC
+    properties:
+      - type: Repository
+        url: https://github.com/VAST-AI-Research/tripo-3d-for-blender
+  - aid: tripo-ai:comfyui-nodes
+    name: Tripo ComfyUI Custom Nodes
+    description: >-
+      Official ComfyUI custom node pack that exposes Tripo task types as
+      composable nodes inside ComfyUI graphs for AI-driven 3D pipelines.
+    humanURL: https://github.com/VAST-AI-Research/ComfyUI-Tripo
+    baseURL: https://github.com/VAST-AI-Research/ComfyUI-Tripo
+    tags:
+      - Plugin
+      - ComfyUI
+      - Workflow
+    properties:
+      - type: Repository
+        url: https://github.com/VAST-AI-Research/ComfyUI-Tripo
+  - aid: tripo-ai:triposr
+    name: TripoSR (Open Source)
+    description: >-
+      Open-source single-image 3D reconstruction model released by VAST AI
+      Research in collaboration with Stability AI. Distributed as model weights
+      and inference code; complementary to the hosted Tripo API.
+    humanURL: https://github.com/VAST-AI-Research/TripoSR
+    baseURL: https://github.com/VAST-AI-Research/TripoSR
+    tags:
+      - Open Source
+      - Research
+      - 3D Reconstruction
+    properties:
+      - type: Repository
+        url: https://github.com/VAST-AI-Research/TripoSR
+common:
+  - type: Website
+    url: https://www.tripo3d.ai/
+  - type: Documentation
+    url: https://platform.tripo3d.ai/docs
+  - type: Developer
+    url: https://www.tripo3d.ai/api
+  - type: SignUp
+    url: https://platform.tripo3d.ai/
+  - type: Pricing
+    url: https://www.tripo3d.ai/pricing
+  - type: GitHub
+    url: https://github.com/VAST-AI-Research
+  - type: Discord
+    url: https://discord.gg/tripoai
+maintainers:
+  - FN: API Evangelist
+    url: https://apievangelist.com
