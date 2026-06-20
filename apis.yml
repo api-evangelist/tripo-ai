@@ -14,7 +14,7 @@ description: >-
   Unreal Engine, ComfyUI, Cocos, and Godot wrap the API for creative and game
   pipelines. Open-source research artifacts (TripoSR, TripoSG, UniRig) ship
   separately on GitHub under the VAST-AI-Research organization.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 created: '2026-05-23'
 modified: '2026-05-23'
