@@ -175,7 +175,7 @@ common:
     url: https://platform.tripo3d.ai/docs
   - type: Developer
     url: https://www.tripo3d.ai/api
-  - type: SignUp
+  - type: Signup
     url: https://platform.tripo3d.ai/
   - type: Pricing
     url: https://www.tripo3d.ai/pricing
