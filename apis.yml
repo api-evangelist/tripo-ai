@@ -181,6 +181,9 @@ apis:
       - type: Repository
         url: https://github.com/VAST-AI-Research/TripoSR
 common:
+  - type: License
+    name: MIT
+    url: https://github.com/VAST-AI-Research/tripo-python-sdk/blob/master/LICENSE
   - type: DomainSecurity
     url: security/tripo-ai-domain-security.yml
   - type: Website
