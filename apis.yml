@@ -35,6 +35,17 @@ tags:
   - 3D
   - Generative AI
   - 3D Modeling
+  - Text-to-3D
+  - Image-to-3D
+  - Rigging
+  - Animation
+  - Texturing
+  - Game Development
+  - Creative Tools
+tags_raw:
+  - 3D
+  - Generative AI
+  - 3D Modeling
   - Text to 3D
   - Image to 3D
   - Rigging
@@ -56,6 +67,10 @@ apis:
     humanURL: https://platform.tripo3d.ai/docs
     baseURL: https://api.tripo3d.ai/v2/openapi
     tags:
+      - Task
+      - Generative 3D
+      - Async
+    tags_raw:
       - Tasks
       - Generative 3D
       - Async
@@ -100,6 +115,10 @@ apis:
     humanURL: https://platform.tripo3d.ai/docs
     baseURL: customer-configured
     tags:
+      - Webhook
+      - Event
+      - Callbacks
+    tags_raw:
       - Webhooks
       - Events
       - Callbacks
@@ -132,6 +151,10 @@ apis:
     tags:
       - MCP
       - Agents
+      - Artificial Intelligence
+    tags_raw:
+      - MCP
+      - Agents
       - AI
     properties:
       - type: Repository
@@ -161,6 +184,10 @@ apis:
     tags:
       - Plugin
       - ComfyUI
+      - Workflows
+    tags_raw:
+      - Plugin
+      - ComfyUI
       - Workflow
     properties:
       - type: Repository
@@ -174,6 +201,10 @@ apis:
     humanURL: https://github.com/VAST-AI-Research/TripoSR
     baseURL: https://github.com/VAST-AI-Research/TripoSR
     tags:
+      - Open-Source
+      - Research
+      - 3D Reconstruction
+    tags_raw:
       - Open Source
       - Research
       - 3D Reconstruction
