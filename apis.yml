@@ -115,6 +115,10 @@ apis:
     tags:
       - Account
       - Billing
+      - Credit
+    tags_raw:
+      - Account
+      - Billing
       - Credits
     properties:
       - type: Documentation
@@ -181,6 +185,10 @@ apis:
     humanURL: https://github.com/VAST-AI-Research/tripo-3d-for-blender
     baseURL: https://github.com/VAST-AI-Research/tripo-3d-for-blender
     tags:
+      - Plugins
+      - Blender
+      - DCC
+    tags_raw:
       - Plugin
       - Blender
       - DCC
@@ -195,7 +203,7 @@ apis:
     humanURL: https://github.com/VAST-AI-Research/ComfyUI-Tripo
     baseURL: https://github.com/VAST-AI-Research/ComfyUI-Tripo
     tags:
-      - Plugin
+      - Plugins
       - ComfyUI
       - Workflows
     tags_raw:
