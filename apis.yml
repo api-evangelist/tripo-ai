@@ -222,13 +222,14 @@ apis:
     humanURL: https://github.com/VAST-AI-Research/TripoSR
     baseURL: https://github.com/VAST-AI-Research/TripoSR
     tags:
-      - Open-Source
+      - Open Source
       - Research
       - 3D Reconstruction
     tags_raw:
       - Open Source
       - Research
       - 3D Reconstruction
+      - Open-Source
     properties:
       - type: Repository
         url: https://github.com/VAST-AI-Research/TripoSR
