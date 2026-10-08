@@ -234,6 +234,12 @@ apis:
       - type: Repository
         url: https://github.com/VAST-AI-Research/TripoSR
 common:
+  - type: Plans
+    url: plans/tripo-ai-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/tripo-ai-rate-limits.yml
+  - type: FinOps
+    url: finops/tripo-ai-finops.yml
   - type: IssueTracker
     url: https://github.com/VAST-AI-Research/tripo-python-sdk/issues
   - type: Releases
